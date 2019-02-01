@@ -1,0 +1,38 @@
+{
+  "name": "free-shadowsocks",
+  "version": "1.0.0",
+  "description": "free shadowsocks account for subscription links",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ireoo/free-shadowsocks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ireoo/free-shadowsocks/issues"
+  },
+  "homepage": "https://github.com/Ireoo/free-shadowsocks#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "compression": "^1.7.3",
+    "express": "^4.16.4",
+    "js-base64": "^2.5.1",
+    "morgan": "^1.9.1",
+    "nightmare": "^3.0.1"
+  },
+  "devDependencies": {
+    "husky": "^1.3.1",
+    "prettier": "1.16.3",
+    "pretty-quick": "^1.10.0"
+  }
+}
