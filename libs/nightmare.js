@@ -3,6 +3,7 @@ const path = require('path')
 
 const nightmare = require('nightmare')
 const cheerio = require('cheerio')
+const { execSync } = require('child_process')
 
 const Base64 = require('js-base64').Base64
 
@@ -72,6 +73,7 @@ const get = () => {
       console.log(data)
       if (data.length > 1) {
         fs.writeFileSync(path.join(process.cwd(), 'proxy.txt'), Base64.encode(data.join('\r\n')))
+        execSync(`git add . && git commit -m "update" && git push`)
       } else {
         throw new error(`No Data.`)
       }
