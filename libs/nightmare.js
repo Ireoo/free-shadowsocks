@@ -10,7 +10,7 @@ const Base64 = require('js-base64').Base64
 const getProxy = () => {
   return new Promise((res, err) => {
     NG = nightmare({
-      show: false,
+      show: true,
       // switches: {
       //   "proxy-server": proxy,
       //   "ignore-certificate-errors": true
@@ -18,7 +18,8 @@ const getProxy = () => {
       openDevTools: {
         mode: 'bottom' // 开发者工具位置：right, bottom, undocked, detach
       },
-      loadTimeout: 30000
+      loadTimeout: 30000,
+      waitTimeout: 300000
     })
     NG.useragent(
       'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.77 Safari/537.36'
