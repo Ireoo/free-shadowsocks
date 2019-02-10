@@ -1,7 +1,7 @@
 {
     "tabWidth": 2,
     "useTabs": false,
-    "parser": "babylon",
+    "parser": "babel",
     "trailingComma": "none",
     "jsxBracketSameLine": true,
     "semi": false,
